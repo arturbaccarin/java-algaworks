@@ -1,4 +1,4 @@
-package com.algaworks.di_model;
+package com.algaworks.di.model;
 
 import java.math.BigDecimal;
 
