@@ -5,14 +5,13 @@ import org.springframework.stereotype.Component;
 
 import com.algaworks.algafoodapi.di.model.Client;
 
-// @Primary
-@Qualifier("normal")
+@Qualifier("urgent")
 @Component
-public class EmailNotificator implements Notificator {
+public class SMSNotificator implements Notificator {
 
     @Override
     public void notificate(Client client, String message) {
-        System.out.printf("Notifying %s in e-mail %s using SMTP: %s\n",
-                client.getName(), client.getEmail(), message);
+        System.out.printf("Notifying %s in SMS %s using SMTP: %s\n",
+                client.getName(), client.getPhone(), message);
     }
 }

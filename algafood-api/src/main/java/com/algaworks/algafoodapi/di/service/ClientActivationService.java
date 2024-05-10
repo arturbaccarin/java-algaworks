@@ -1,6 +1,9 @@
 package com.algaworks.algafoodapi.di.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.algaworks.algafoodapi.di.model.Client;
@@ -9,7 +12,9 @@ import com.algaworks.algafoodapi.di.notification.Notificator;
 @Component
 public class ClientActivationService {
 
-    @Autowired
+    // private List<Notificator> notificators;
+    @Qualifier("normal")
+    @Autowired(required = false)
     private Notificator notificator;
 
     // @Autowired
@@ -24,7 +29,7 @@ public class ClientActivationService {
     public void activate(Client client) {
         client.active();
 
-        this.notificator.notificate(client, "Your register is active!");
+        notificator.notificate(client, "Your register is ready!");
     }
 
     // @Autowired
