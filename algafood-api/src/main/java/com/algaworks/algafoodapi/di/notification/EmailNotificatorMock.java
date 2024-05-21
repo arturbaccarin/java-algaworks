@@ -16,7 +16,7 @@ public class EmailNotificatorMock implements Notificator {
 
     @Override
     public void notificate(Client client, String message) {
-        System.out.printf("MOCK: Notifying %s in e-mail %s using SMTP: %s\n",
+        System.out.printf("Notifying %s in e-mail %s using SMTP: %s\n",
                 client.getName(), client.getEmail(), message);
     }
 }
