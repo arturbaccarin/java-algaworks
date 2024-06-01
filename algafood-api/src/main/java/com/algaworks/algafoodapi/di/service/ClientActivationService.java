@@ -1,19 +1,10 @@
 package com.algaworks.algafoodapi.di.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
 import com.algaworks.algafoodapi.di.model.Client;
-import com.algaworks.algafoodapi.di.notification.Notificator;
-import com.algaworks.algafoodapi.di.notification.NotificatorType;
-import com.algaworks.algafoodapi.di.notification.UrgencyLevel;
-
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
 
 @Component
 public class ClientActivationService {
